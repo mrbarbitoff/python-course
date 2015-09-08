@@ -10,6 +10,7 @@ And code blocks are looking as usual, that is also cool. I.e.:
 ```
 import numpy as np
 will_you_be_happy = np.random.random(1) <= 0.0001
+print(will_you_be_happy)
 ```
   
   
