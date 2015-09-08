@@ -9,7 +9,7 @@ Thankfully, GitHub still supports *text styling* **in the classic manner**. Many
 And code blocks are looking as usual, that is also cool. I.e.:
 ```
 import numpy as np
-will_you_be_happy = np.random.random(1) <= 0.0001
+will_you_be_happy = np.random.random(1) <= 0.00000001
 print(will_you_be_happy)
 ```
   
