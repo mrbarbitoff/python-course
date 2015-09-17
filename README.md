@@ -12,7 +12,8 @@ import numpy as np
 will_you_be_happy = np.random.random(1) <= 0.00000001
 print(will_you_be_happy)
 ```
-  
+ ========2015-09-27=========
+ Added script for homework number 1!
   
 Yury A. Barbitoff, 2015.  
 All rights reserved ©  
