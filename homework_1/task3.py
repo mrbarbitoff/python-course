@@ -1,21 +1,13 @@
-#Task 3 - having a little headache with formatting output
+#Task 3 - correected using specific features (many thx to KZ)
 inp = input()
 numbers = inp.split()
 for i in range(len(numbers)):
     numbers[i] = int(numbers[i])
-even = []
-odd = []
-for i in range(len(numbers)//2):
-    even.append(numbers[i*2])
-    odd.append(numbers[i*2 + 1])
-even.sort()
-odd.sort()
-odd = list(reversed(odd))
+even = sorted(numbers[0::2])
+odd = sorted(numbers[1::2], reverse = True) #list.sort(reverse = True) works as well
 out = []
 for i in range(len(even)):
     out.append(even[i])
     out.append(odd[i])
-output = ''
-for elem in out:
-    output += str(elem) + ' '
-print(output.rstrip())     
+output = ' '.join([str(number) for number in out])
+print(output)
