@@ -1,10 +1,10 @@
-#Task 3 - correected using specific features (many thx to KZ)
+# Task 3 - correected using specific features (many thx to KZ)
 inp = input()
 numbers = inp.split()
 for i in range(len(numbers)):
     numbers[i] = int(numbers[i])
 even = sorted(numbers[0::2])
-odd = sorted(numbers[1::2], reverse = True) #list.sort(reverse = True) works as well
+odd = sorted(numbers[1::2], reverse=True)
 out = []
 for i in range(len(even)):
     out.append(even[i])

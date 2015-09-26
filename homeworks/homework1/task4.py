@@ -1,4 +1,4 @@
-#Task 4
+# Task 4
 string = input()
 counts = dict()
 for letter in string:

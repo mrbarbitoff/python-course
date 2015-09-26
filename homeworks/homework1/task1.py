@@ -1,4 +1,4 @@
-#Task 1
+# Task 1
 obj = input()
 num = int(input())
 if obj == 'утюг':

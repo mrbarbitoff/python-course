@@ -6,3 +6,4 @@ for number in prepr:
     numbers.append(int(number))
 print(sum(numbers)/len(numbers))
 # Alternatively, could use numpy.mean() that does not work in Stepic
+
