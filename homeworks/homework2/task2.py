@@ -10,4 +10,4 @@ def prime(number):
 
 n = int(input())
 for _ in range(n):
-    prime(int(input()))
+    print(prime(int(input())))
