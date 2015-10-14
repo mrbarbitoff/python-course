@@ -9,9 +9,8 @@ def rpfilter(a, *args):
     for number in args:
         if euclid(number, a) == 1:
             rp_numbers.append(number)
-    if len(rp_numbers) == 0:
-        rp_numbers.append(None)
     return rp_numbers
 
 
-print(" ".join((str(x) for x in rpfilter(*(int(x) for x in input().split())))))
+rp_list = rpfilter(*(int(x) for x in input().split()))
+print(" ".join((str(x) for x in rp_list)) if len(rp_list) > 0 else None)
