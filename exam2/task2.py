@@ -11,7 +11,7 @@ with open('links.txt', 'r') as ifile:
 mailinglst = set()
 for lnk in addresses:
     data = requests.get(lnk)
-    mails = re.findall('[\w.]+@[\w.]+', data.text)
+    mails = re.findall('[\w\.]+@[\w\.]+', data.text)
     for mail in mails:
         if len(re.findall('^\.|\.$|\.@|@\.', mail)) == 0:
             mailinglst.add(mail)
