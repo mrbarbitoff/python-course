@@ -9,5 +9,6 @@ parser = etree.HTMLParser()
 tree = etree.fromstring(twittor, parser)
 
 for tweet in tree.iter("p"):
-    if 'tweet-text' in str(tweet.attrib):
-        print(tweet.text)
+    if 'class' in tweet.attrib:
+        if 'tweet-text' in tweet.attrib['class']:
+            print(tweet.text)
