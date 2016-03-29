@@ -24,7 +24,6 @@ args = parser.parse_args()
 if 'sad' not in subprocess.check_output('ls ~', shell=True).decode('utf-8').split('\n'):
     status_code = subprocess.call('mkdir ~/sad', shell=True)
 
-
 # Storing
 def store(path):
     if os.path.isdir(os.path.abspath(path)):
