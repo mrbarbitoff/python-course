@@ -19,7 +19,7 @@ parser.add_argument("taxon",
 
 args = parser.parse_args()
 
-formatted_taxon = '' if args.taxon == '' else args.taxon + '[Organism]'
+formatted_taxon = '' if args.taxon == '' else ' AND ' + args.taxon + '[Organism]'
 formatted_query = '%s AND GSE[Entry Type]%s' % (args.query, formatted_taxon)
 result = e.read(e.esearch(db='gds', term=formatted_query, retmax=1000000))
 
