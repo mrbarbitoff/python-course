@@ -28,5 +28,3 @@ for this_id in ids:
     gse = e.read(e.esummary(db='gds', id=this_id))[0]
     out_str = '%s\t%s\t%s' % (gse['Accession'], gse['taxon'], gse['title'])
     print(out_str)
-
-
