@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+
+import sqlite3 as sq
+
+with sq.connect('tmp.sqlite') as con:
+    cur = con.cursor()
+    for row in cur.execute("select students.name, year, (sum(score)* 1.0)/count(*) as avg from students inner join participation"
+                           " on student_id = students.id inner join courses on course_id = courses.id group by students.id order by avg desc"):
+        print(row)
+    for row in cur.execute("select courses.name, year, (sum(score)* 1.0)/count(*) as avg from students inner join participation"
+                       " on student_id = students.id inner join courses on course_id = courses.id group by courses.id, year"):
+        print(row)
