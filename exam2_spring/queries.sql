@@ -11,7 +11,7 @@ select Users.username, count(*) as cnt from Users inner join Listened on Users.i
 select Artists.name, count(*) as cnt from Artists inner join Albums on Artists.id = Albums.artist_id group by Artists.id order by cnt desc;
 
 -- Songs number
-select Artists.name, count(*) as cnt from Artists inner join Albums on Artists.id = Albums.artist_id inner join Songs on Songs.album_id = Albums.id group by Artists.id order by cnt desc;
+select Artists.name, count(*) as cnt from Artists inner join Albums on Artists.id = Albums.artist_id inner join Songs on Songs.album_id = Albums.id group by Artists.id order by cnt desc limit 1;
 
 -- Longest by count
 select Artists.name, Albums.name, count(*) as cnt from Artists inner join Albums on Artists.id = Albums.artist_id inner join Songs on Songs.album_id = Albums.id group by Albums.id order by cnt desc limit 1;
@@ -32,5 +32,4 @@ select Albums.release_year, count(*) as cnt from Artists inner join Albums on Ar
 select Artists.name, Albums.name, Songs.name, Listened.start_time from Artists inner join Albums on Artists.id = Albums.artist_id inner join Songs on Songs.album_id = Albums.id inner join Listened on Listened.song_id = Songs.id inner join Users on Users.id = Listened.user_id where Users.id = 47 order by Listened.start_time desc limit 20;
 
 -- I can't even understand why the fuck. Anyway.
-select Users.username, Artists.name, Albums.name, Songs.name, count(*) as cnt from Artists inner join Albums on Artists.id = Albums.artist_id inner join Songs on Songs.album_id = Albums.id inner join Listened on Listened.song_id = Songs.id inner join Users on Users.id = Listened.user_id group by Users.id, Songs.id order by cnt desc limit 1;
- 
+select Users.username, Artists.name, Albums.name, Songs.name, count(*) as cnt from Artists inner join Albums on Artists.id = Albums.artist_id inner join Songs on Songs.album_id = Albums.id inner join Listened on Listened.song_id = Songs.id inner join Users on Users.id = Listened.user_id group by Users.id, Songs.id order by cnt desc;
